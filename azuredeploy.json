@@ -87,7 +87,7 @@
       "properties": {
         "publicIPAllocationMethod": "Dynamic",
         "dnsSettings": {
-          "domainNameLabel": "[toLower(concat(parameters('machineName'),'dns'))]"
+          "domainNameLabel": "[toLower(concat(variables('vmnameFix'),'dns'))]"
         }
       }
     },
@@ -138,7 +138,7 @@
     },
     { "type": "Microsoft.Compute/virtualMachines",
       "apiVersion": "2017-03-30",
-      "name": "[parameters('machineName')]",
+      "name": "[variables('vmnameFix')]",
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkInterfaces/', concat(variables('vmnameFix'),'nic'))]"
@@ -176,7 +176,7 @@
         "apiVersion": "2017-03-30",
         "location": "[resourceGroup().location]",
         "dependsOn": [
-          "[concat('Microsoft.Compute/virtualMachines/', parameters('machineName'))]"
+          "[concat('Microsoft.Compute/virtualMachines/', variables('vmnameFix'))]"
         ],
         "properties": {
           "publisher": "Microsoft.Azure.Extensions",
