@@ -2,14 +2,17 @@
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+    "machineName": {
+      "value": "myVAXBox"
+    },
     "adminUsername": {
-      "value": "ghuser"
+      "value": "azureuser"
     },
     "adminPassword": {
-      "value": "GEN-PASSWORD"
+      "value": "Azure@123456"
     },
-    "dnsLabelPrefix": {
-      "value": "GEN-UNIQUE"
+    "VMSize": {
+      "value": "Standard_DS15_v2"
     }
   }
 }
