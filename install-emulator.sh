@@ -17,6 +17,5 @@ make
 cd ../boot
 ln -s /opt/vax_emulator/simhv390/BIN/vax vax
 wget -q https://raw.githubusercontent.com/tanewill/vaxemulator/master/vax.ini
-sed -i "s/_USER/$USER/g" vax.ini
 chown -R $NEWUSER /opt/vax_emulator
 ln -s /opt/vax_emulator /home/$NEWUSER/vax_emulator
