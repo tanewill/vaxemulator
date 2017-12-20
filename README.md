@@ -15,6 +15,10 @@ Deployment, download, and configuration should take about 15 minutes.
 
 Emulator is located at /opt/vax_emulator
 
+Some guidance on running
+- [Unix for VMS users](https://www-bd.fnal.gov/controls/linux/vms2unix.html)
+- [Running VAX/VMS using SIMH](http://www.wherry.com/gadgets/retrocomputing/vax-simh.html)
+
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftanewill%2Fvaxemulator%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
