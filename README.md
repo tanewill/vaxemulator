@@ -2,7 +2,10 @@
 Simple ARM template to deploy a VAX emulator on a Linux machine
 
 # Quickstart
-- Deploy using the buttons below
+- Deploy
+  - <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftanewill%2Fvaxemulator%2Fmaster%2Fazuredeploy.json" target="_blank">
+    <img src="http://azuredeploy.net/deploybutton.png"/>
+</a>
 - Logon to Virtual Machine
 - Navigate to emulator, `cd /opt/vax_emulator`
 - Launch emulator, `./vax`
