@@ -1,14 +1,14 @@
 # VAX Emulator running on Microsoft Azure
 Simple ARM template to deploy a VAX emulator on a Linux machine
 
-#Quickstart
+# Quickstart
 - Deploy using the buttons below
 - Logon to Virtual Machine
 - Navigate to emulator, `cd /opt/vax_emulator`
 - Launch emulator, `./vax`
 - Boot disk, `boot dua0`
 
-#Introduction
+# Introduction
 This template creates a VM running the latest version of Oracle Linux that has a VAX emulator built from [The Computer History Simulation Project](http://simh.trailing-edge.com/)
 
 Deployment, download, and configuration should take about 15 minutes.
