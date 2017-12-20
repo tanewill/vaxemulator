@@ -2,16 +2,21 @@
 
 set -x
 
+NEWUSER=$1
+
 sudo yum install -y -q unzip wget
-mkdir -p vax_emulator/boot
-cd vax_emulator
+sudo yum group install -y -q "Development Tools"
+mkdir -p /opt/vax_emulator/boot
+cd /opt/vax_emulator/
 wget https://azbenchmarkstorage.blob.core.windows.net/vax/vax_emulator.tgz
-unzip vax_emulator.tar
+tar -xzvf vax_emulator.tgz
 cp dua/dua0.vdisk boot/
 cp simhv390/VAX/ka655x.bin boot/
 cd simhv390
 make
-ln -s BIN/vax ../boot/vax
 cd ../boot
+ln -s /opt/vax_emulator/simhv390/BIN/vax vax
 wget https://raw.githubusercontent.com/tanewill/vaxemulator/master/vax.ini
 sed -i "s/_USER/$USER/g" vax.ini
+chown -R $NEWUSER /opt/vax_emulator
+ln -s /opt/vax_emulator /home/$NEWUSER/vax_emulator
